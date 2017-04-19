@@ -1,0 +1,212 @@
+//colors
+
+@orange: #ff7206;
+@black: #334455;
+@blue: #0c7ea7;
+@gray: #c2c2c2;
+@white: #ffffff;
+@red: #ff6666;
+
+//Fonts
+
+@font_style: "Roboto", sans-serif, Arial;
+
+//Text style
+
+h1{
+  font-family: @font_style;
+  font-size:28px;
+  line-height: 38px;
+  font-weight: 400;
+}
+
+h2{
+  font-family: @font_style;
+  font-size:22px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+h3{
+  font-family: @font_style;
+  font-size:18px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+.normal_text_big{
+  font-family: @font_style;
+  font-size:18px;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+.normal_small_text{
+  font-family: @font_style;
+  font-size:14px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+a{
+  font-size: 18px;
+  color: @blue;
+  text-decoration: underline;
+  font-family: @font_style;
+  &:hover{
+    color: @orange;
+  }
+}
+
+//Mixins
+
+.button{
+  width: 285px;
+  height: 60px;
+  font-size: 18px;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  font-family: @font_style;
+  border-radius: 30px;
+  transition: all 0.2s;
+  &:hover{
+    transition: all 0.2s;
+  }
+}
+
+.orange-button{
+   .button;
+   background: @orange;
+   color: @white;
+   font-size: 18px;
+   font-weight: 400;
+   &:hover{
+     background: @blue;
+   }
+}
+
+.orange-border-button{
+  .button;
+  background: transparent;
+  color: @orange;
+  border: solid 1px @orange;
+  font-size: 18px;
+  font-weight: 400;
+  &:hover{
+    background: @orange;
+    color: @white;
+  }
+}
+
+.white-border-button{
+  .button;
+  background: transparent;
+  color: @white;
+  border: solid 1px @white;
+  font-size: 18px;
+  font-weight: 400;
+  &:hover{
+    background: @white;
+    color: @orange;
+  }
+}
+
+.input{
+  width: 100%;
+  max-width: 380px;
+  height: 40px;
+  outline: none;
+  border: solid 1px @gray;
+  border-radius: 20px;
+  color: @black;
+  font-family: @font_style;
+  line-height: 40px;
+  padding: 0 20px;
+  font-size: 16px;
+  &:focus{
+    border: solid 1px @orange;
+  }
+  &.error{
+    border: 1px solid @red;
+  }
+}
+
+div.input-outer-container{
+  position: relative;
+  height: 70px;
+  padding: 15px 0;
+  width: 100%;
+  max-width: 380px;
+}
+
+
+.error-message{
+  position: absolute;
+  bottom: 0;
+  text-align: right;
+  display: inline-block;
+  vertical-align: bottom;
+  color: @red;
+  font-size: 12px;
+  width: 100%;
+  font-family: @font_style;
+  font-weight: 400;
+}
+
+label{
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  .normal_text_big;
+  font-size: 16px;
+  color: @gray;
+  transition: all 0.3s;
+  &.active{
+    top: -5px;
+    color: @orange;
+    transition: all 0.3s;
+    font-size: 12px;
+    font-family: @font_style;
+    display: inline-block;
+    vertical-align: top;
+  }
+  &.filled{
+    top: -5px;
+    color: @gray;
+    transition: all 0.3s;
+    font-size: 12px;
+    font-family: @font_style;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+
+//Flex-grid
+
+.item-1{
+  flex-grow: 1;
+}
+.item-2{
+  flex-grow: 2;
+}
+.item-3{
+  flex-grow: 3;
+}
+.item-4{
+  flex-grow: 4;
+}
+.item-5{
+  flex-grow: 5;
+}
+.item-6{
+  flex-grow: 6;
+}
+.item-7{
+  flex-grow: 7;
+}
+.item-8{
+  flex-grow: 8;
+}
+
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AppCare</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/_icons.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo item-3">AppCare</h1>
+            <div class="links-container item-4">
+                <ul>
+                    <li class="first "><div class="inner-elem active"><a href="#" class="nav-link">Driver & User</a></div></li>
+                    <li><div class="inner-elem active"><a href="#" class="nav-link">Insurance companies & auto repair shops</a></div></li>
+                </ul>
+            </div>
+            <div class="user-links-container item-3">
+                <ul>
+                    <li>
+                        <a class="pseudo-link">Log in</a>
+                        <div class="login-container absolute-form" id="log-in" style="display: none;">
+                            <div class="top_part">
+                                <i class="icon-corner"></i>
+                                <h5>Log in to your account</h5>
+                                <p>(for professionals only)</p>
+                            </div>
+                            <div class="main-part">
+                                <form action="POST">
+                                    <div class="input-outer-container">
+                                        <label for="email">Email</label>
+                                        <input  class="input" id="email" type="email">
+                                    </div>
+                                    <div class="input-outer-container">
+                                        <label for="password">Password</label>
+                                        <input  class="input" id="password" type="password">
+                                    </div>
+                                    <div class="bottom-part">
+                                        <button class="orange-button">Log in</button>
+                                        <a href="#">Forgot password</a>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                        <div class="restore-password absolute-form" style="display: none;">
+                            <div class="top_part">
+                                <i class="icon-corner"></i>
+                                <h5>Restore your password</h5>
+                            </div>
+                            <div class="main-part">
+                                <div class="input-outer-container">
+                                    <label for="email-restore">Email</label>
+                                    <input  class="input" id="email-restore" type="email">
+                                </div>
+
+                                <div class="bottom-part">
+                                    <button class="orange-button">Send</button>
+                                    <a href="#">Cancel</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a class="pseudo-link" >Sign up</a></li>
+                    <li><a class="pseudo-link" >En <i class="icon-arrow_small_down"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+    </header>
+    <div class="wrapper">
+        <div class="top_block_main_page">
+            <div class="container">
+                <i class="icon-calendar"></i>
+            </div>
+        </div>
+    </div>
+
+<script src = "./scripts/main.js"></script>
+</body>
+</html>

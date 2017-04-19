@@ -1,0 +1,40 @@
+//Main styles
+
+.clearfix {
+  &:after {
+    clear: both;
+    content: '';
+    display: block;
+  }
+}
+
+.container{
+  width: 100%;
+  height: 100%;
+  max-width: 1366px;
+  margin: auto;
+  .clearfix;
+}
+
+.wrapper{
+  width: 100%;
+  padding-bottom: 400px;
+  height: 100%;
+}
+
+.footer{
+  width: 100%;
+  height: 400px;
+  margin-bottom: -400px;
+}
+
+
+
+
+//imports
+
+@import "footer";
+@import "header";
+@import "variables";
+@import "reset";
+@import "main-page";
