@@ -2,9 +2,197 @@
   width: 100%;
   height: 100vh;
   padding-top: 100px;
-  background: url("../images/main-top-block-bg.jpg");
+  background:linear-gradient( 45deg, rgb(0,0,0) 0%, rgba(36,63,82,0.36) 64%, rgba(72,125,164,0) 100%), url("../images/main-top-block-bg.jpg");
   -webkit-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 0 60%;
+  background-attachment: fixed;
+  background-position: center;
+  .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .top_block_text{
+    font-size: 52px;
+    font-weight: 300;
+    font-family:@font_style;
+    color: @white;
+    line-height: 65px;
+    text-transform: uppercase;
+  }
+  .top_block_item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 170px;
+    align-items: center;
+    .point-container{
+      display: flex;
+      flex-direction: row;
+      color: @white;
+      .icon-container{
+        margin-right: 20px;
+        i{
+          font-size: 46px;
+        }
+      }
+    }
+  }
+
+  .image-container{
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.slider_container{
+  width: 100%;
+  min-height: 710px;
+  background: @black;
+  color: @white;
+  .slider_container_top_part {
+    height: 150px;
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .item-1:first-child {
+        display: flex;
+        justify-content: flex-start;
+        h2{
+          font-size: 28px;
+          line-height: 1.5em;
+        }
+      }
+      .item-1 {
+        display: flex;
+        justify-content: flex-end;
+        p{
+          text-align: right;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 1.5em;
+        }
+      }
+    }
+  }
+  .slider{
+
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    padding: 0 0 80px;
+  }
+  .swiper-container{
+    height: 392px;
+
+  }
+  .appCare_slider{
+    box-sizing: border-box;
+    width: 100%;
+    height: 370px;
+    .slider{
+      height: 100%;
+      width: 100%;
+      height: 425px;
+      margin: 0 auto
+    }
+    .app-slider{
+      padding: 43px 50px;
+      position: relative;
+      &:after{
+        display: block;
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 258px;
+        height: 512px;
+        background: url("../images/iphohe_slider.svg");
+        top: -15px;
+        background-repeat: no-repeat;
+        z-index: 10;
+      }
+      .swiper-slide{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        opacity: 0.3;
+        transition: all 0.3s;
+        &.swiper-slide-active{
+          opacity: 1;
+          transition: all 0.3s;
+        }
+      }
+      img{
+        width:220px;
+        height: 392px;
+      }
+    }
+  }
+}
+
+.info-block{
+  height: 710px;
+  .container{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    .right-part{
+      h2{
+        color: @orange;
+        font-size: 28px;
+        font-family: @font_style;
+        line-height: 34px;
+        margin-bottom: 120px;
+        margin-top: 35px;
+      }
+      .points-list{
+        display: flex;
+        flex-direction: column;
+        li{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-around;
+          height: 100px;
+          img{
+            max-width: 45px;
+            margin-right: 40px;
+          }
+          .text{
+            font-size: 18px;
+            color: @black;
+          }
+        }
+      }
+    }
+  }
+  .relative_block-container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    .absolute-images{
+      position: absolute;
+      &.first-picture{
+        top: 67px;
+        right: 0;
+        z-index: 1;
+      }
+      &.second-picture{
+        top: 402px;
+        right: 55px;
+        z-index: 3;
+      }
+      &.third-picture{
+        top: 190px;
+        left: 20px;
+        z-index: 2;
+      }
+    }
+  }
 }

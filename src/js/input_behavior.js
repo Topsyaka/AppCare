@@ -22,6 +22,7 @@ var InputModule = (function ($) {
             $(elem).on('focus',function () {
                 $(this).addClass('active');
                 $(this).parents('.input-outer-container').find('label').removeClass('filled').addClass('active');
+                $(this).parents('.textarea-outer-container').find('label').removeClass('filled').addClass('active');
             });
 
             $(elem).on('focusout',function () {
@@ -29,9 +30,11 @@ var InputModule = (function ($) {
 
                 $(this).removeClass('active');
                 $(this).parents('.input-outer-container').find('label').removeClass('active');
+                $(this).parents('.textarea-outer-container').find('label').removeClass('active');
 
                 if (value){
-                    $(this).parents('.input-outer-container').find('label').addClass('filled')
+                    $(this).parents('.input-outer-container').find('label').addClass('filled');
+                    $(this).parents('.textarea-outer-container').find('label').addClass('filled');
                 }
             });
 

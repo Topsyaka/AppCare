@@ -29,7 +29,7 @@ gulp.task('styles', function () {
 
 // Scripts
 gulp.task('scripts', function () {
-    return gulp.src(['src/js/libs/jquery.js', 'src/js/input_behavior.js'])
+    return gulp.src(['src/js/libs/jquery.js','src/js/libs/swiper.jquery.js','src/js/libs/swiper.js', 'src/js/input_behavior.js', 'src/js/swiperModule.js', 'src/js/main_page.js'])
     //.pipe(jshint.reporter('default'))
         .pipe(concat('main.js'))
         .pipe(gulp.dest('build/scripts'))
@@ -39,6 +39,17 @@ gulp.task('scripts', function () {
         .pipe(gulp.dest('build/scripts'))
         .pipe(notify({message: 'Scripts task complete'}));
 });
+
+gulp.task('main-page-scripts',function () {
+    return gulp.src(['src/js/libs/jquery.js','src/js/libs/swiper.jquery.js','src/js/libs/swiper.js', 'src/js/input_behavior.js', 'src/js/swiperModule.js', 'src/js/main_page.js'])
+        .pipe(concat('main_page.js'))
+        .pipe(gulp.dest('build/scripts'))
+        //.pipe(rename({ suffix: '.min' }))
+        //.pipe(uglify())
+        .pipe(livereload(server))
+        .pipe(gulp.dest('build/scripts'))
+        .pipe(notify({message: 'Scripts task complete'}));
+})
 
 // Images
 gulp.task('images', function () {
@@ -62,6 +73,13 @@ gulp.task('move', function () {
         .pipe(gulp.dest('build'));
 });
 
+// Move css libs
+
+gulp.task('move-css',function () {
+    return gulp.src('src/css_libs/**/**.css')
+        .pipe(gulp.dest('build/css/libs'));
+});
+
 //Iconfont
 
 gulp.task('iconfont', function () {
@@ -83,7 +101,7 @@ gulp.task('iconfont', function () {
 
 // Default task
 gulp.task('default', ['clean'], function () {
-    gulp.run('styles', 'scripts', 'images');
+    gulp.run('styles', 'scripts', 'images', 'move-css');
 });
 
 // Watch
@@ -95,7 +113,7 @@ gulp.task('watch', function () {
             return console.log(err)
         }
         ;
-
+        gulp.run('default');
         // Watch .scss files
         gulp.watch('src/less/**/*.less', function (event) {
             console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
@@ -125,6 +143,13 @@ gulp.task('watch', function () {
             console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
             gulp.run('iconfont');
         });
+
+        // Watch css libs
+
+        gulp.watch('src/css_libs/**/*',function (event) {
+            console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+            gulp.run('move-css');
+        })
 
     });
 

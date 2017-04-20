@@ -132,7 +132,20 @@ a{
   }
 }
 
-div.input-outer-container{
+textarea.input{
+  height: 115px;
+  resize: none;
+  line-height: 20px;
+  padding: 10px 20px;
+}
+
+.textarea-outer-container{
+
+  .input-outer-container;
+  height: 145px;
+}
+
+.input-outer-container{
   position: relative;
   height: 70px;
   padding: 15px 0;
@@ -186,6 +199,7 @@ label{
 
 .item-1{
   flex-grow: 1;
+  flex: 1;
 }
 .item-2{
   flex-grow: 2;
@@ -198,6 +212,7 @@ label{
 }
 .item-5{
   flex-grow: 5;
+  flex: 5;
 }
 .item-6{
   flex-grow: 6;

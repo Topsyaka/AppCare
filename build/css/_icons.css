@@ -22,14 +22,38 @@
 }
 
 
-.icon-arrow_small_down:before {
+.icon-apple:before {
                                           content: "\E001";
                                       }
 
-.icon-calendar:before {
+.icon-arrow_small_down:before {
                                           content: "\E002";
                                       }
 
-.icon-corner:before {
+.icon-calendar:before {
                                           content: "\E003";
+                                      }
+
+.icon-car:before {
+                                          content: "\E004";
+                                      }
+
+.icon-check:before {
+                                          content: "\E005";
+                                      }
+
+.icon-corner:before {
+                                          content: "\E006";
+                                      }
+
+.icon-hammer:before {
+                                          content: "\E007";
+                                      }
+
+.icon-list:before {
+                                          content: "\E008";
+                                      }
+
+.icon-person:before {
+                                          content: "\E009";
                                       }

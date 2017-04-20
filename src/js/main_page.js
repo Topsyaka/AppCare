@@ -5,8 +5,9 @@
  * @version    1
  * @link        https://tallium.com
  *
- * Created by Anton on 19.04.2017.
+ * Created by Anton on 20.04.2017.
  */
 
-var jQuery, $ = require('jquery');
-
+$(document).ready(function(){
+    MainPageModule.init();
+});
