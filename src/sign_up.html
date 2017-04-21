@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AppCare</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/_icons.css">
+    <link rel="stylesheet" href="./css/libs/swiper.min.css">
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <h1 class="logo item-3">AppCare</h1>
+        <div class="links-container item-4">
+            <ul>
+                <li class="first "><div class="inner-elem"><a href="#" class="nav-link">Driver & User</a></div></li>
+                <li><div class="inner-elem"><a href="#" class="nav-link">Insurance companies & auto repair shops</a></div></li>
+            </ul>
+        </div>
+        <div class="user-links-container item-3">
+            <ul>
+                <li>
+                    <a class="pseudo-link">Log in</a>
+                    <div class="login-container absolute-form" id="log-in" style="display: none;">
+                        <div class="top_part">
+                            <i class="icon-corner"></i>
+                            <h5>Log in to your account</h5>
+                            <p>(for professionals only)</p>
+                        </div>
+                        <div class="main-part">
+                            <form action="POST">
+                                <div class="input-outer-container">
+                                    <label for="email">Email</label>
+                                    <input  class="input" id="email" type="email">
+                                </div>
+                                <div class="input-outer-container">
+                                    <label for="password">Password</label>
+                                    <input  class="input" id="password" type="password">
+                                </div>
+                                <div class="bottom-part">
+                                    <button class="orange-button">Log in</button>
+                                    <a href="#">Forgot password</a>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                    <div class="restore-password absolute-form" style="display: none;">
+                        <div class="top_part">
+                            <i class="icon-corner"></i>
+                            <h5>Restore your password</h5>
+                        </div>
+                        <div class="main-part">
+                            <div class="input-outer-container">
+                                <label for="email-restore">Email</label>
+                                <input  class="input" id="email-restore" type="email">
+                            </div>
+
+                            <div class="bottom-part">
+                                <button class="orange-button">Send</button>
+                                <a href="#">Cancel</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a class="pseudo-link" >Sign up</a></li>
+                <li><a class="pseudo-link" >En <i class="icon-arrow_small_down"></i></a></li>
+            </ul>
+        </div>
+    </div>
+
+</header>
+<div class="wrapper">
+    <div class="sign-up-container">
+        <div class="container">
+            <div class="form_container">
+                <form action="POST">
+                    <div class="top-row-title">
+                        <h2>Sign up</h2>
+                        <p class="normal_small_text">(for professionals only)</p>
+                    </div>
+                    <div class="input-container">
+                        <div class="item-1">
+                            <div class="input-outer-container">
+                                <label for="sign-email">Email</label>
+                                <input  class="input" id="sign-email" type="email">
+                            </div>
+                            <div class="input-outer-container">
+                                <label for="cr-password">Password</label>
+                                <input  class="input" id="cr-password" type="password">
+                            </div>
+                            <div class="input-outer-container">
+                                <label for="cf-password">Confirm password</label>
+                                <input  class="input" id="cf-password" type="password">
+                            </div>
+                            <div class="input-outer-container">
+                                <label for="ct-person">Contact person</label>
+                                <input  class="input" id="ct-person" type="text">
+                            </div>
+                            <div class="input-outer-container">
+                                <label for="phone">Phone number</label>
+                                <input  class="input" id="phone">
+                            </div>
+                            <div class="input-outer-container">
+                                <label for="cel-phone">Cell phone number</label>
+                                <input  class="input" id="cel-phone">
+                            </div>
+                        </div>
+                        <div class="item-1">
+                            <div class="input-outer-container">
+                                <label for="shop-name">Repair shop's name</label>
+                                <input  class="input" id="shop-name">
+                            </div>
+                            <div class="input-outer-container">
+                                <label for="garage-number">Garage reg. number</label>
+                                <input  class="input" id="garage-number">
+                            </div>
+                            <div class="input-outer-container">
+                                <label for="address">Address</label>
+                                <input  class="input" id="address">
+                            </div>
+                            <div class="input-outer-container">
+                                <label for="city">City</label>
+                                <input  class="input" id="city">
+                            </div>
+                            <div class="input-outer-container">
+                                <label for="state">State</label>
+                                <input  class="input" id="state">
+                            </div>
+                            <div class="input-outer-container">
+                                <label for="zip">Zip code</label>
+                                <input  class="input" id="zip">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-button-row">
+                        <button class="orange-button">Sign up</button>
+                    </div>
+                    <div class="bootm-sign">
+                        <p class="small-text">
+                            By clicking "Register"
+                        </p>
+                        <p class =small-text>I agree to Appcare Terms of Services</p>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <div class="contact-form">
+        <div class="container">
+            <div class="top-part">
+                <h2>Any further question about care?</h2>
+                <h3>Please feel free to contact us with any question, comment or request</h3>
+            </div>
+            <form action="POST">
+                <div class="input-outer-container">
+                    <label for="name">Full name</label>
+                    <input  class="input" id="name">
+                </div>
+                <div class="input-outer-container">
+                    <label for="contact-email">Email</label>
+                    <input  class="input" id="contact-email" type="email">
+                </div>
+                <div class="textarea-outer-container">
+                    <label for="message">Ask a question</label>
+                    <textarea  class="input" id="message"></textarea>
+                </div>
+                <button class="orange-button">Send</button>
+            </form>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="footer-top-part">
+        <div class="container">
+            <div class="footer-logo"></div>
+            <h2>Accident and damage reporter -<br/>
+                Auto repair shop comparison</h2>
+            <p class="normal_text_big">Save precious time in stressful situations</p>
+            <div class="pseudo-button-container">
+                <div class="pseudo-button orange-button">
+                    <div class="container-icon">
+                        <i class="icon-apple"></i>
+                    </div>
+                    <div class="button_text_container">
+                        <p class="normal_small_text">Download on the</p>
+                        <p class="normal_text_big">App Store</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom-part">
+        <div class="footer-bottom-container">
+            <div class="item-1">
+                <img src="./images/tallium_logo_gray.png" alt="Tallium logo">
+                <p class="normal_small_text"> - design & development</p>
+            </div>
+            <div class="item-1">Care &copy; 2017 All Rights Reserved.</div>
+        </div>
+    </div>
+</footer>
+
+<script src = "./scripts/main.js"></script>
+</body>
+</html>

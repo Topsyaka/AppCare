@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/_icons.css">
     <link rel="stylesheet" href="./css/libs/swiper.min.css">
+    <link rel="stylesheet" href="./css/libs/animate.css">
 </head>
 <body>
     <header class="header">
         <div class="container">
-            <h1 class="logo item-3">AppCare</h1>
+            <a href="#"><h1 class="logo item-3">AppCare</h1></a>
             <div class="links-container item-4">
                 <ul>
                     <li class="first "><div class="inner-elem"><a href="#" class="nav-link">Driver & User</a></div></li>
@@ -101,7 +102,7 @@
                     </div>
                 </div>
                 <div class="item-1">
-                    <div class="image-container">
+                    <div class="image-container" id="topBlockImage" isNeedAnimation = "true">
                         <img src="./images/iphone_picture.png" alt="">
                     </div>  
                 </div>
@@ -158,9 +159,9 @@
                 </div>
                 <div class="item-1">
                     <div class="relative_block-container">
-                        <img src="./images/iphone_black_picture.png" alt="" class="absolute-images first-picture">
-                        <img src="./images/screen-1.png" alt="" class="absolute-images third-picture">
-                        <img src="./images/screen-2.png" alt="" class="absolute-images second-picture">
+                        <img src="./images/iphone_black_picture.png" alt="" class="absolute-images first-picture" id = "iphone" isNeedAnimation = "true">
+                        <img src="./images/screen-1.png" alt="" class="absolute-images third-picture" id="iphoneScreen1" isNeedAnimation = "true">
+                        <img src="./images/screen-2.png" alt="" class="absolute-images second-picture" id="iphoneScreen2" isNeedAnimation = "true">
                     </div>
                 </div>
             </div>
@@ -193,10 +194,30 @@
         <div class="footer-top-part">
             <div class="container">
                 <div class="footer-logo"></div>
+                <h2>Accident and damage reporter -<br/>
+                    Auto repair shop comparison</h2>
+                <p class="normal_text_big">Save precious time in stressful situations</p>
+                <div class="pseudo-button-container">
+                    <div class="pseudo-button orange-button">
+                        <div class="container-icon">
+                            <i class="icon-apple"></i>
+                        </div>
+                        <div class="button_text_container">
+                            <p class="normal_small_text">Download on the</p>
+                            <p class="normal_text_big">App Store</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="footer-bottom-part">
-
+            <div class="footer-bottom-container">
+                <div class="item-1">
+                    <a href="https://tallium.com/"><img src="./images/tallium_logo_gray.png" alt="Tallium logo"></a>
+                    <p class="normal_small_text"> - design & development</p>
+                </div>
+                <div class="item-1">Care &copy; 2017 All Rights Reserved.</div>
+            </div>
         </div>
     </footer>
 

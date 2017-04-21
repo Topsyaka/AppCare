@@ -20368,8 +20368,11 @@ var MainPageModule = (function ($, Swiper) {
         var swiperSlider = new Swiper('.app-slider',{
             direction: 'horizontal',
             loop: true,
+            spped: 1000,
+            autoplayDisableOnInteraction: false,
             slidesPerView: 5,
             centeredSlides: true,
+            autoplay: 5000,
             breakpoints: {
                 // when window width is <= 320px
 
@@ -20399,9 +20402,129 @@ var MainPageModule = (function ($, Swiper) {
  * @version    1
  * @link        https://tallium.com
  *
+ * Created by Anton on 21.04.2017.
+ */
+
+var AnimationModule = (function ($) {
+
+    var init = function (){
+
+    }
+
+    var addAnimationToElement = function (array,scrollTop) {
+        if (scrollTop) {
+
+            /**
+             * object template
+             * {
+             *  elementID : string,
+             *  elementAnimationClass: string,
+             *  onload : boolean,
+             *  afterAnimation: object
+             * }
+             *
+             * */
+
+            var windowHeight = $(window).height();
+
+            function objectParse(obj) {
+                if (obj.elementID && obj.elementAnimationClass && $(obj.elementID).length) {
+                    var elem = $(obj.elementID),
+                        animateClass = obj.elementAnimationClass,
+                        elemOffsetTop = elem.offset().top;
+                    console.log(elemOffsetTop+' '+scrollTop);
+                    if ((elemOffsetTop <= (scrollTop + windowHeight/4)) || obj.onload) {
+                        elem.addClass(`animated ${animateClass}`);
+                        if (obj.afterAnimation) {
+                            elem.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+                                objectParse(obj.afterAnimation, 1);
+                            });
+                        }
+                    }
+
+                }
+            }
+
+            if (array.length) {
+                if (typeof array.forEach == 'function') {
+                    array.forEach(function (item) {
+                        objectParse(item);
+                    })
+                }
+            }
+        }
+    }
+
+    return {
+        addAnimationToElement : addAnimationToElement
+    }
+
+})($);
+/**
+ * @category  Tallium
+ * @author      Tallium Inc (https://tallium.com)
+ * @copyright   Copyright (C) 2017 Tallium Inc. All rights reserved.
+ * @version    1
+ * @link        https://tallium.com
+ *
  * Created by Anton on 20.04.2017.
  */
 
 $(document).ready(function(){
     MainPageModule.init();
+    AnimationModule.addAnimationToElement([
+        {
+            elementID: "#topBlockImage",
+            elementAnimationClass: "fadeInUp",
+            onload: true
+        },
+        {
+            elementID: "#notebookRight",
+            elementAnimationClass:"fadeInRight",
+            onload: true,
+            afterAnimation: {
+                elementID: "#notebookRightScreen",
+                elementAnimationClass: "fadeInRight",
+                onload: true
+            }
+        }
+    ],1)
+    $(window).scroll(function () {
+        var scrollY = this.scrollY;
+        AnimationModule.addAnimationToElement([
+            {
+                elementID: "#topBlockImage",
+                elementAnimationClass: "fadeInRight",
+                onload: true
+            },
+            {
+                elementID: "#iphone",
+                elementAnimationClass: "fadeInRight",
+                onload: false,
+                afterAnimation: {
+                    elementID: "#iphoneScreen1",
+                    elementAnimationClass: "fadeInRight",
+                    onload: true,
+                    afterAnimation: {
+                        elementID: "#iphoneScreen2",
+                        elementAnimationClass: "fadeInRight",
+                        onload: true
+                    }
+                }
+            },
+            {
+                elementID: "#notebookLeft",
+                elementAnimationClass: "fadeInLeft",
+                onload: false,
+                afterAnimation: {
+                    elementID: "#notebookLeftScreen",
+                    elementAnimationClass: "fadeInLeft",
+                    onload: true,
+                }
+            }
+
+
+        ],scrollY)
+    });
 });
+

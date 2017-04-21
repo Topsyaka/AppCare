@@ -18,8 +18,11 @@ var MainPageModule = (function ($, Swiper) {
         var swiperSlider = new Swiper('.app-slider',{
             direction: 'horizontal',
             loop: true,
+            spped: 1000,
+            autoplayDisableOnInteraction: false,
             slidesPerView: 5,
             centeredSlides: true,
+            autoplay: 5000,
             breakpoints: {
                 // when window width is <= 320px
 

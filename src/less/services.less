@@ -1,0 +1,131 @@
+.services_top_block{
+  padding-top: 100px;
+  min-height: 100vh;
+
+
+  .info-block{
+    background:linear-gradient( 45deg, rgb(0,0,0) 0%, rgba(36,63,82,0.36) 64%, rgba(72,125,164,0) 100%), url("../images/services_bg.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    padding-bottom: 50px;
+    min-height: 100vh;
+    .container{
+      .right-part{
+        h2{
+          color: @white;
+          margin: 0;
+          display: flex;
+          align-items: center;
+          height: 180px;
+        }
+        .points-list{
+          li{
+            .text{
+              color: @white;
+            }
+          }
+        }
+        button{
+          margin-top: 40px;
+        }
+      }
+    }
+    .absolute_images{
+      position: absolute;
+      &.first-image{
+        top: 130px;
+        left: 390px;
+        z-index: 1;
+      }
+      &.second-image{
+        top: 180px;
+        left: 170px;
+        z-index: 2;
+      }
+    }
+  }
+}
+
+.insuarence_block{
+  background: url("../images/insuarence_bg.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  min-height: 710px ;
+  .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .top_row{
+      height: 160px;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      color: @white;
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 32px;
+      flex: 1;
+    }
+    .middle-row{
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      min-height: 375px;
+      flex:1;
+      .item-4{
+        align-self: flex-start;
+      }
+      .points-list{
+        display: flex;
+        flex-direction: column;
+        color: @white;
+        font-size: 18px;
+        line-height: 28px;
+        li{
+          display: flex;
+          flex: 1;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          height: 100px;
+          img{
+            max-width: 40px;
+            flex: 1;
+            margin-right: 40px;
+          }
+          .text{
+            max-width: 265px;
+          }
+
+        }
+      }
+      .relative-block{
+        position: relative;
+        height: 100%;
+        .absolute_images{
+          position: absolute;
+          &.first-image{
+            left: -350px;
+            top: 0;
+          }
+          &.second-image{
+            left: 100px;
+            top: 70px;
+          }
+        }
+      }
+    }
+    .bottom-row{
+      flex:1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

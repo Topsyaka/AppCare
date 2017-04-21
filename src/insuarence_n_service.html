@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AppCare</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/_icons.css">
+    <link rel="stylesheet" href="./css/libs/swiper.min.css">
+    <link rel="stylesheet" href="./css/libs/animate.css">
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <h1 class="logo item-3">AppCare</h1>
+        <div class="links-container item-4">
+            <ul>
+                <li class="first "><div class="inner-elem"><a href="#" class="nav-link">Driver & User</a></div></li>
+                <li><div class="inner-elem"><a href="#" class="nav-link">Insurance companies & auto repair shops</a></div></li>
+            </ul>
+        </div>
+        <div class="user-links-container item-3">
+            <ul>
+                <li>
+                    <a class="pseudo-link">Log in</a>
+                    <div class="login-container absolute-form" id="log-in" style="display: none;">
+                        <div class="top_part">
+                            <i class="icon-corner"></i>
+                            <h5>Log in to your account</h5>
+                            <p>(for professionals only)</p>
+                        </div>
+                        <div class="main-part">
+                            <form action="POST">
+                                <div class="input-outer-container">
+                                    <label for="email">Email</label>
+                                    <input  class="input" id="email" type="email">
+                                </div>
+                                <div class="input-outer-container">
+                                    <label for="password">Password</label>
+                                    <input  class="input" id="password" type="password">
+                                </div>
+                                <div class="bottom-part">
+                                    <button class="orange-button">Log in</button>
+                                    <a href="#">Forgot password</a>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                    <div class="restore-password absolute-form" style="display: none;">
+                        <div class="top_part">
+                            <i class="icon-corner"></i>
+                            <h5>Restore your password</h5>
+                        </div>
+                        <div class="main-part">
+                            <div class="input-outer-container">
+                                <label for="email-restore">Email</label>
+                                <input  class="input" id="email-restore" type="email">
+                            </div>
+
+                            <div class="bottom-part">
+                                <button class="orange-button">Send</button>
+                                <a href="#">Cancel</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a class="pseudo-link" >Sign up</a></li>
+                <li><a class="pseudo-link" >En <i class="icon-arrow_small_down"></i></a></li>
+            </ul>
+        </div>
+    </div>
+
+</header>
+<div class="wrapper">
+    <div class="services_top_block">
+        <div class="info-block">
+            <div class="container">
+                <div class="item-1 right-part">
+                    <h2>Manage your account <br/>
+                        and keep track of your requests</h2>
+                    <ul class="points-list">
+                        <li><img src="./images/icon-eye.png" class="item-1" alt=""> <div class="text item-5" >View all the nearby requests for vehicle servicing on your admin panel</div> </li>
+                        <li><img src="./images/icon-profile.png" class="item-1" alt=""> <div class="text item-5">Make your own offer for vehicle servicing</div></li>
+                        <li><img src="./images/icon-bubbles.png" class="item-1" alt=""> <div class="text item-5">Nagotiate and discuss all details throught the messaging interface</div></li>
+                        <li><img src="./images/icon-check.png" class="item-1" alt=""> <div class="text item-5">Win the auction and service the vehicle</div></li>
+                    </ul>
+                    <button class="orange-border-button">Sign up as professional</button>
+                </div>
+                <div class="item-1">
+                    <div class="relative_block-container">
+
+                        <img src="./images/computer.png" alt="" class="absolute_images first-image" id="notebookRight" isNeedAnimation = "true">
+                        <img src="./images/screen-services.png" alt="" class="absolute_images second-image" id="notebookRightScreen" isNeedAnimation = "true">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="insuarence_block">
+        <div class="container">
+            <h2 class="top_row">
+                Insurance companies receive very detailed <br/>
+                forms describing damage to vehicles
+            </h2>
+            <div class="middle-row">
+                <div class="item-4">
+                    <div class="relative-block">
+                        <div class="relative_block-container">
+                            <img src="./images/computer.png" alt="" class="absolute_images first-image" id="notebookLeft" isNeedAnimation = "true">
+                            <img src="./images/screen-services.png" alt="" class="absolute_images second-image" id="notebookLeftScreen" isNeedAnimation = "true">
+                        </div>
+                    </div>
+                </div>
+                <div class="item-5">
+                    <ul class="points-list">
+                        <li><img src="./images/icon-doc.png" class="item-1" alt=""> <div class="text item-5" >Receive the damage report directly by email
+                        </div> </li>
+                        <li><img src="./images/icon-calendar.png" class="item-1" alt=""> <div class="text item-5">Stay up-to-date with all your clients' damages
+                        </div></li>
+                        <li><img src="./images/icon-bulb.png" class="item-1" alt=""> <div class="text item-5">Receive a standardized report with descriptions and photos</div></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom-row">
+                <button class="white-border-button">Contact us</button>
+            </div>
+        </div>
+    </div>
+    <div class="contact-form">
+        <div class="container">
+            <div class="top-part">
+                <h2>Any further question about care?</h2>
+                <h3>Please feel free to contact us with any question, comment or request</h3>
+            </div>
+            <form action="POST">
+                <div class="input-outer-container">
+                    <label for="name">Full name</label>
+                    <input  class="input" id="name">
+                </div>
+                <div class="input-outer-container">
+                    <label for="contact-email">Email</label>
+                    <input  class="input" id="contact-email" type="email">
+                </div>
+                <div class="textarea-outer-container">
+                    <label for="message">Ask a question</label>
+                    <textarea  class="input" id="message"></textarea>
+                </div>
+                <button class="orange-button">Send</button>
+            </form>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="footer-top-part">
+        <div class="container">
+            <div class="footer-logo"></div>
+            <h2>Accident and damage reporter -<br/>
+                Auto repair shop comparison</h2>
+            <p class="normal_text_big">Save precious time in stressful situations</p>
+            <div class="pseudo-button-container">
+                <div class="pseudo-button orange-button">
+                    <div class="container-icon">
+                        <i class="icon-apple"></i>
+                    </div>
+                    <div class="button_text_container">
+                        <p class="normal_small_text">Download on the</p>
+                        <p class="normal_text_big">App Store</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom-part">
+        <div class="footer-bottom-container">
+            <div class="item-1">
+                <img src="./images/tallium_logo_gray.png" alt="Tallium logo">
+                <p class="normal_small_text"> - design & development</p>
+            </div>
+            <div class="item-1">Care &copy; 2017 All Rights Reserved.</div>
+        </div>
+    </div>
+</footer>
+
+<script src = "./scripts/main.js"></script>
+</body>
+</html>

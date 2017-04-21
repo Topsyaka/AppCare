@@ -10,4 +10,59 @@
 
 $(document).ready(function(){
     MainPageModule.init();
+    AnimationModule.addAnimationToElement([
+        {
+            elementID: "#topBlockImage",
+            elementAnimationClass: "fadeInUp",
+            onload: true
+        },
+        {
+            elementID: "#notebookRight",
+            elementAnimationClass:"fadeInRight",
+            onload: true,
+            afterAnimation: {
+                elementID: "#notebookRightScreen",
+                elementAnimationClass: "fadeInRight",
+                onload: true
+            }
+        }
+    ],1)
+    $(window).scroll(function () {
+        var scrollY = this.scrollY;
+        AnimationModule.addAnimationToElement([
+            {
+                elementID: "#topBlockImage",
+                elementAnimationClass: "fadeInRight",
+                onload: true
+            },
+            {
+                elementID: "#iphone",
+                elementAnimationClass: "fadeInRight",
+                onload: false,
+                afterAnimation: {
+                    elementID: "#iphoneScreen1",
+                    elementAnimationClass: "fadeInRight",
+                    onload: true,
+                    afterAnimation: {
+                        elementID: "#iphoneScreen2",
+                        elementAnimationClass: "fadeInRight",
+                        onload: true
+                    }
+                }
+            },
+            {
+                elementID: "#notebookLeft",
+                elementAnimationClass: "fadeInLeft",
+                onload: false,
+                afterAnimation: {
+                    elementID: "#notebookLeftScreen",
+                    elementAnimationClass: "fadeInLeft",
+                    onload: true,
+                }
+            }
+
+
+        ],scrollY)
+    });
 });
+
