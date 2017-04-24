@@ -10,6 +10,7 @@
 
 $(document).ready(function(){
     MainPageModule.init();
+    HeaderModule.init();
     AnimationModule.addAnimationToElement([
         {
             elementID: "#topBlockImage",

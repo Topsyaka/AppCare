@@ -12,18 +12,26 @@
 <body>
     <header class="header">
         <div class="container">
-            <a href="#"><h1 class="logo item-3">AppCare</h1></a>
-            <div class="links-container item-4">
+            <div class="service_block item-1">
+            <a href="#" class="item-1"><h1 class="logo">AppCare</h1></a>
+            <div class="item-1 burger-button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            </div>
+
+            <div class="links-container item-1">
                 <ul>
                     <li class="first "><div class="inner-elem"><a href="#" class="nav-link">Driver & User</a></div></li>
                     <li><div class="inner-elem"><a href="#" class="nav-link">Insurance companies & auto repair shops</a></div></li>
                 </ul>
             </div>
-            <div class="user-links-container item-3">
+            <div class="user-links-container item-1">
                 <ul>
                     <li>
-                        <a class="pseudo-link">Log in</a>
-                        <div class="login-container absolute-form" id="log-in" style="display: none;">
+                        <a class="pseudo-link" id="open_container">Log in</a>
+                        <div class="login-container absolute-form" id="log-in" >
                             <div class="top_part">
                                 <i class="icon-corner"></i>
                                 <h5>Log in to your account</h5>
@@ -41,13 +49,15 @@
                                     </div>
                                     <div class="bottom-part">
                                         <button class="orange-button">Log in</button>
-                                        <a href="#">Forgot password</a>
+                                        <a href="#" id="forgot">Forgot password</a>
                                     </div>
                                 </form>
-
+                                <div class="close_modal">
+                                    <a href="#">Back to menu</a>
+                                </div>
                             </div>
                         </div>
-                        <div class="restore-password absolute-form" style="display: none;">
+                        <div class="absolute-form" id="restore-password" >
                             <div class="top_part">
                                 <i class="icon-corner"></i>
                                 <h5>Restore your password</h5>
@@ -69,8 +79,8 @@
                     <li><a class="pseudo-link" >En <i class="icon-arrow_small_down"></i></a></li>
                 </ul>
             </div>
-        </div>
 
+        </div>
     </header>
     <div class="wrapper">
         <div class="top_block_main_page">
@@ -101,7 +111,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="item-1">
+                <div class="item-1 small-dn">
                     <div class="image-container" id="topBlockImage" isNeedAnimation = "true">
                         <img src="./images/iphone_picture.png" alt="">
                     </div>  
@@ -140,7 +150,7 @@
                 </div>
             </div>
         </div>
-        <div class="info-block">
+        <div class="info-block main_page">
             <div class="container">
                 <div class="item-1 right-part">
                     <h2>Manage your account <br/>
@@ -157,7 +167,7 @@
                             <br> the best price</div></li>
                     </ul>
                 </div>
-                <div class="item-1">
+                <div class="item-1 small-disp">
                     <div class="relative_block-container">
                         <img src="./images/iphone_black_picture.png" alt="" class="absolute-images first-picture" id = "iphone" isNeedAnimation = "true">
                         <img src="./images/screen-1.png" alt="" class="absolute-images third-picture" id="iphoneScreen1" isNeedAnimation = "true">
@@ -196,7 +206,7 @@
                 <div class="footer-logo"></div>
                 <h2>Accident and damage reporter -<br/>
                     Auto repair shop comparison</h2>
-                <p class="normal_text_big">Save precious time in stressful situations</p>
+                <p class="normal_text_big footer_text">Save precious time in stressful situations</p>
                 <div class="pseudo-button-container">
                     <div class="pseudo-button orange-button">
                         <div class="container-icon">

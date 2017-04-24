@@ -29,7 +29,7 @@ gulp.task('styles', function () {
 
 // Scripts
 gulp.task('scripts', function () {
-    return gulp.src(['src/js/libs/jquery.js','src/js/libs/swiper.jquery.js','src/js/libs/swiper.js', 'src/js/input_behavior.js', 'src/js/swiperModule.js','src/js/AnimationModule.js', 'src/js/main_page.js'])
+    return gulp.src(['src/js/libs/jquery.js','src/js/libs/swiper.jquery.js','src/js/libs/swiper.js', 'src/js/input_behavior.js','src/js/header_behavior.js', 'src/js/swiperModule.js','src/js/AnimationModule.js', 'src/js/main_page.js'])
     //.pipe(jshint.reporter('default'))
         .pipe(concat('main.js'))
         .pipe(gulp.dest('build/scripts'))

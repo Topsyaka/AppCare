@@ -1,6 +1,7 @@
 .top_block_main_page{
   width: 100%;
   height: 100vh;
+  min-height: 710px;
   padding-top: 100px;
   background:linear-gradient( 45deg, rgb(0,0,0) 0%, rgba(36,63,82,0.36) 64%, rgba(72,125,164,0) 100%), url("../images/main-top-block-bg.jpg");
   -webkit-background-size: cover;
@@ -8,10 +9,26 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+
+    .iphone{
+      @media screen and (max-width: 450px){
+        display: none;
+      }
+
+      #topBlockImage{
+        height: 100%;
+      }
+      img{
+        max-height: 100%;
+      }
+    }
+
   .container{
     display: flex;
     flex-direction: row;
     align-items: center;
+    position: relative;
+
   }
   .top_block_text{
     font-size: 52px;
@@ -20,6 +37,30 @@
     color: @white;
     line-height: 65px;
     text-transform: uppercase;
+    @media screen and (max-width: 450px){
+      text-align: center;
+      font-size: 27px;
+      line-height: 32px;
+      margin-bottom: 40px;
+      position: relative;
+      z-index: 10;
+      &:before{
+
+          display: block;
+          position: absolute;
+          content: '';
+          width:0;
+          height: 40px;
+          bottom: -140px;
+          border: solid 1px @orange;
+          left: 0;
+          right: 0;
+          margin: auto;
+          top: 0;
+          z-index: 1;
+
+      }
+    }
   }
   .top_block_item{
     display: flex;
@@ -27,12 +68,43 @@
     justify-content: space-between;
     height: 170px;
     align-items: center;
+    @media screen and (max-width: 450px){
+      flex-direction: column;
+      height: auto;
+    }
     .point-container{
       display: flex;
       flex-direction: row;
       color: @white;
+      @media screen and (max-width: 450px){
+        margin-bottom: 40px;
+        position: relative;
+        &:before{
+
+          display: block;
+          position: absolute;
+          content: '';
+          width:0;
+          height: 40px;
+          bottom: -97px;
+          border: solid 1px @orange;
+          left: 0;
+          right: 0;
+          margin: auto;
+          top: 0;
+          z-index: 1;
+
+        }
+        h2{
+          text-align: center;
+          line-height: 29px;
+        }
+      }
       .icon-container{
         margin-right: 20px;
+        @media screen and (max-width: 450px){
+          display: none;
+        }
         i{
           font-size: 46px;
         }
@@ -44,6 +116,34 @@
     display: flex;
     justify-content: flex-end;
   }
+  .pseudo-button-container{
+    @media screen and (max-width: 450px){
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 40px;
+      margin-top: 10px;
+      position: relative;
+      &:before{
+
+        display: block;
+        position: absolute;
+        content: '';
+        width:0;
+        height: 40px;
+        bottom: -120px;
+        border: solid 1px @orange;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 0;
+        z-index: 1;
+
+      }
+
+    }
+  }
 }
 
 .slider_container{
@@ -51,18 +151,33 @@
   min-height: 710px;
   background: @black;
   color: @white;
+  overflow-x: hidden;
   .slider_container_top_part {
     height: 150px;
     .container {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      @media screen and (max-width: @main_breakpoint){
+        flex-direction: column;
+        justify-content: center;
+      }
       .item-1:first-child {
         display: flex;
         justify-content: flex-start;
+        @media screen and (max-width: @main_breakpoint){
+          align-items: center;
+        }
         h2{
           font-size: 28px;
           line-height: 1.5em;
+          @media screen and (max-width: @main_breakpoint){
+            font-size: 18px;
+            text-align: center;
+          }
+          @media screen and (max-width: @smallest_screen){
+            font-size: 17px;
+          }
         }
       }
       .item-1 {
@@ -73,6 +188,13 @@
           font-size: 18px;
           font-weight: 400;
           line-height: 1.5em;
+          @media screen and (max-width: @main_breakpoint){
+            font-size: 14px;
+            text-align: center;
+          }
+          @media screen and (max-width: @smallest_screen){
+            font-size: 13px;
+          }
         }
       }
     }
@@ -134,5 +256,92 @@
     }
   }
 }
+
+.main_page.info-block{
+  min-height: 710px;
+  height: auto;
+  .container{
+    @media screen and (max-width: @big_break){
+      flex-direction: column;
+    }
+    .right-part{
+      .points-list{
+        li{
+          .text{
+            @media screen and (max-width: @main_breakpoint){
+              font-size: 14px;
+              line-height: 1.5em;
+              br{
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    @media screen and (max-width: @big_break){
+      .small-disp{
+        height: 600px;
+        width: 100%;
+        position: relative;
+        .relative_block-container{
+          .absolute-images{
+
+              &.first-picture{
+                top: 0;
+                max-height: 100%;
+              }
+              &.third-picture{
+                top: 65px;
+                max-height: 60%;
+                right: 200px;
+                left: auto;
+              }
+              &.second-picture{
+                top:66%;
+                right: 235px;
+                max-height: 33%
+              }
+
+
+          }
+
+        }
+      }
+    }
+    @media screen and (max-width: @main_breakpoint){
+    .small-disp{
+      height: 315px;
+      width: 100%;
+      position: relative;
+      .relative_block-container{
+        .absolute-images{
+
+            &.first-picture{
+              top: 0;
+              max-height: 100%;
+            }
+            &.third-picture{
+              top: 65px;
+              max-height: 200px;
+              right: 140px;
+              left: auto;
+            }
+            &.second-picture{
+              top:170px;
+              right: 55px;
+              max-height: 105px;
+            }
+          }
+
+        }
+
+      }
+    }
+  }
+
+}
+
+
 
 
