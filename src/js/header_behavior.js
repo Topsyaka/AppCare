@@ -12,6 +12,7 @@ var HeaderModule = (function ($) {
 
     var init = function () {
         addMobileMenuFunctionality();
+        addScrollHeader();
     }
 
     function addMobileMenuFunctionality() {
@@ -33,6 +34,27 @@ var HeaderModule = (function ($) {
             $('#restore-password').addClass('open');
         });
 
+        $('#cancel').click(function () {
+           $('.absolute-form').removeClass('open');
+        });
+
+    }
+
+    function addScrollHeader() {
+        var windowWidth = $(window).width();
+
+        if(windowWidth<=450){
+            $(window).on('scroll',function () {
+                var $this = $(this);
+                console.log($this.scrollTop());
+
+                if ($this.scrollTop()>= 400){
+                    $('header').addClass('scrolled')
+                }else{
+                    $('header').removeClass('scrolled');
+                }
+            })
+        }
     }
 
     return {
