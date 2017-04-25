@@ -43,7 +43,7 @@ var HeaderModule = (function ($) {
     function addScrollHeader() {
         var windowWidth = $(window).width();
 
-        if(windowWidth<=450){
+        if(windowWidth<=450 && !($("#sign-up-form").length)){
             $(window).on('scroll',function () {
                 var $this = $(this);
                 console.log($this.scrollTop());
@@ -54,6 +54,8 @@ var HeaderModule = (function ($) {
                     $('header').removeClass('scrolled');
                 }
             })
+        }else if($("#sign-up-form").length && windowWidth<=450){
+            $('header').addClass('scrolled sign');
         }
     }
 

@@ -6,8 +6,15 @@
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center;
+  @media screen and (max-width: @main_breakpoint){
+    background: @white;
+    padding-top: 60px;
+  }
   .container{
     padding-top: 90px;
+    @media screen and (max-width: @main_breakpoint){
+      padding-top: 0;
+    }
     .form_container{
       width: 100%;
       max-width: 850px;
@@ -23,6 +30,10 @@
           display: flex;
           justify-content: center;
           max-width: 380px;
+          @media screen and (max-width: @main_breakpoint){
+            margin: auto;
+          }
+
         }
         .input-container{
           display: flex;
@@ -31,6 +42,9 @@
           width: 100%;
           max-width: 790px;
           margin: auto;
+          @media screen and (max-width: @main_breakpoint){
+            flex-direction: column;
+          }
           .item-1:last-child{
             display: flex;
             flex-direction: column;

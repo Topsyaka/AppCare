@@ -11,25 +11,36 @@
 <body>
 <header class="header">
     <div class="container">
-        <h1 class="logo item-3">AppCare</h1>
-        <div class="links-container item-4">
+        <div class="service_block item-1">
+            <a href="#" class="item-1"><h1 class="logo">AppCare</h1></a>
+            <ul class="user-links-container item-1">
+                <li><a class="pseudo-link" >En <i class="icon-arrow_small_down"></i></a></li>
+            </ul>
+            <div class="item-1 burger-button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="links-container item-1">
             <ul>
                 <li class="first "><div class="inner-elem"><a href="#" class="nav-link">Driver & User</a></div></li>
                 <li><div class="inner-elem"><a href="#" class="nav-link">Insurance companies & auto repair shops</a></div></li>
             </ul>
         </div>
-        <div class="user-links-container item-3">
+        <div class="user-links-container item-1">
             <ul>
                 <li>
-                    <a class="pseudo-link">Log in</a>
-                    <div class="login-container absolute-form" id="log-in" style="display: none;">
+                    <a class="pseudo-link" id="open_container">Log in</a>
+                    <div class="login-container absolute-form" id="log-in" >
                         <div class="top_part">
                             <i class="icon-corner"></i>
                             <h5>Log in to your account</h5>
                             <p>(for professionals only)</p>
                         </div>
                         <div class="main-part">
-                            <form action="POST">
+                            <form action="POST" id="sign-up-form">
                                 <div class="input-outer-container">
                                     <label for="email">Email</label>
                                     <input  class="input" id="email" type="email">
@@ -40,13 +51,15 @@
                                 </div>
                                 <div class="bottom-part">
                                     <button class="orange-button">Log in</button>
-                                    <a href="#">Forgot password</a>
+                                    <a href="#" id="forgot">Forgot password</a>
                                 </div>
                             </form>
-
+                            <div class="close_modal">
+                                <a href="#">Back to menu</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="restore-password absolute-form" style="display: none;">
+                    <div class="absolute-form restore-password" id="restore-password" >
                         <div class="top_part">
                             <i class="icon-corner"></i>
                             <h5>Restore your password</h5>
@@ -59,7 +72,7 @@
 
                             <div class="bottom-part">
                                 <button class="orange-button">Send</button>
-                                <a href="#">Cancel</a>
+                                <a href="#" id="cancel">Cancel</a>
                             </div>
                         </div>
                     </div>
@@ -68,8 +81,8 @@
                 <li><a class="pseudo-link" >En <i class="icon-arrow_small_down"></i></a></li>
             </ul>
         </div>
-    </div>
 
+    </div>
 </header>
 <div class="wrapper">
     <div class="sign-up-container">
@@ -179,7 +192,7 @@
             <div class="footer-logo"></div>
             <h2>Accident and damage reporter -<br/>
                 Auto repair shop comparison</h2>
-            <p class="normal_text_big">Save precious time in stressful situations</p>
+            <p class="normal_text_big footer_text">Save precious time in stressful situations</p>
             <div class="pseudo-button-container">
                 <div class="pseudo-button orange-button">
                     <div class="container-icon">
@@ -196,7 +209,7 @@
     <div class="footer-bottom-part">
         <div class="footer-bottom-container">
             <div class="item-1">
-                <img src="./images/tallium_logo_gray.png" alt="Tallium logo">
+                <a href="https://tallium.com/"><img src="./images/tallium_logo_gray.png" alt="Tallium logo"></a>
                 <p class="normal_small_text"> - design & development</p>
             </div>
             <div class="item-1">Care &copy; 2017 All Rights Reserved.</div>

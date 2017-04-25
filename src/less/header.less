@@ -3,6 +3,9 @@
   height: 100px;
   background: @white;
   position: absolute;
+  &.sign{
+    box-shadow: 2px 0 13px rgba(0,0,0,0.1);
+  }
   &.scrolled{
     position: fixed;
     top: 0;
@@ -156,6 +159,7 @@
             justify-content: space-around;
             @media screen and (max-width: @main_breakpoint){
               height: 100%;
+              max-width: none;
             }
             &.active{
               border-bottom: solid 4px @orange;
@@ -175,6 +179,10 @@
             text-align: center;
             vertical-align: middle;
             font-size: 16px;
+            @media screen and (max-width: @main_breakpoint){
+              font-size: 22px;
+              line-height: 1.3em;
+            }
           }
         }
       }
@@ -344,7 +352,9 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-
+  .user-links-container{
+    display: none;
+  }
 }
 .burger-button{
   position: relative;
