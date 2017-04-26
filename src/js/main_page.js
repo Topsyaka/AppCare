@@ -14,7 +14,7 @@ $(document).ready(function(){
     AnimationModule.addAnimationToElement([
         {
             elementID: "#topBlockImage",
-            elementAnimationClass: "fadeInUp",
+            elementAnimationClass: "fadeInRight",
             onload: true
         },
         {

@@ -108,7 +108,7 @@ gulp.task('default', ['clean'], function () {
 gulp.task('watch', function () {
 
     // Listen on port 35729
-    server.listen(35729, function (err) {
+    server.listen(35728, function (err) {
         if (err) {
             return console.log(err)
         }

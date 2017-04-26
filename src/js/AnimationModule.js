@@ -14,7 +14,7 @@ var AnimationModule = (function ($) {
 
     }
 
-    var addAnimationToElement = function (array,scrollTop) {
+    var addAnimationToElement = function (array,scrollTop,callback) {
         if (scrollTop) {
 
             /**
@@ -53,9 +53,13 @@ var AnimationModule = (function ($) {
                     array.forEach(function (item) {
                         objectParse(item);
                     })
+                    if (typeof callback == 'function'){
+                        callback();
+                    }
                 }
             }
         }
+
     }
 
     return {

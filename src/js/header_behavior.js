@@ -22,7 +22,35 @@ var HeaderModule = (function ($) {
         });
 
         $('#open_container').click(function () {
-            $('#log-in').toggleClass('open');
+            // $('#log-in').toggleClass('open');
+            // console.log($('#log-in').hasClass('open'));
+            if(!($('#log-in').hasClass('open'))){
+                $('#log-in').on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function (event) {
+                    $(this).off(event);
+                });
+                AnimationModule.addAnimationToElement([{
+                    elementID: "#log-in",
+                    elementAnimationClass: "fadeIn",
+                    onload: true
+                }],1);
+                $('#log-in').addClass('open');
+            }else{
+                $('#log-in').removeClass('fadeIn animated');
+                AnimationModule.addAnimationToElement([{
+                    elementID: "#log-in",
+                    elementAnimationClass: "fadeOut",
+                    onload: true
+                }],1,function () {
+
+                    $('#log-in').on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function (event) {
+                        $('#log-in').removeClass('fadeOut animated open');
+                        $(this).off(event);
+                    });
+
+                });
+
+
+            }
         });
 
         $('.close_modal').click(function () {
