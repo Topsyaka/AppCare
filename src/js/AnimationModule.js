@@ -25,6 +25,10 @@ var AnimationModule = (function ($) {
              *  onload : boolean,
              *  afterAnimation: object
              * }
+             * callback: function
+             * Add .one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function (event) {
+             *
+             * }
              *
              * */
 
@@ -52,7 +56,7 @@ var AnimationModule = (function ($) {
                 if (typeof array.forEach == 'function') {
                     array.forEach(function (item) {
                         objectParse(item);
-                    })
+                    });
                     if (typeof callback == 'function'){
                         callback();
                     }
