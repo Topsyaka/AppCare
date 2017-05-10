@@ -49,6 +49,8 @@ var MainPageModule = (function ($, Swiper) {
 
             // If we need pagination
         });
+
+
     }
 
     return {

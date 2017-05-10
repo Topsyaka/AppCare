@@ -13,12 +13,15 @@ var HeaderModule = (function ($) {
     var init = function () {
         addMobileMenuFunctionality();
         addScrollHeader();
+        //checkSign();
     }
 
     function addMobileMenuFunctionality() {
 
         $('.burger-button').click(function () {
             $(this).toggleClass('open').parents('header').toggleClass('tooglled');
+
+
         });
 
         $('#open_container').click(function () {
@@ -52,9 +55,47 @@ var HeaderModule = (function ($) {
 
             }
         });
+        $('.change_language').click(function () {
+            // $('#log-in').toggleClass('open');
+            // console.log($('#log-in').hasClass('open'));
+            if(!($('#lang-change').hasClass('open'))){
+                $('#lang-change').parents('li').css('display','inherit');
+                $('#lang-change').on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function (event) {
+                    $(this).off(event);
+                });
+                AnimationModule.addAnimationToElement([{
+                    elementID: "#lang-change",
+                    elementAnimationClass: "fadeIn",
+                    onload: true
+                }],1);
+                $('#lang-change').addClass('open');
+            }else{
+
+                $('#lang-change').removeClass('fadeIn animated');
+                AnimationModule.addAnimationToElement([{
+                    elementID: "#lang-change",
+                    elementAnimationClass: "fadeOut",
+                    onload: true
+                }],1,function () {
+
+                    $('#lang-change').on('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function (event) {
+                        $('#lang-change').parents('li').css('display','');
+                        $('#lang-change').removeClass('fadeOut animated open');
+
+                        $(this).off(event);
+                        //$('#lang-change').parents('li').css('display','none');
+                    });
+
+                });
+
+
+            }
+        });
 
         $('.close_modal').click(function () {
             $('#log-in').removeClass('open');
+            $('#lang-change').removeClass('open');
+            $('#lang-change').parents('li').css('display','');
         });
 
         $('#forgot').click(function () {
@@ -74,7 +115,7 @@ var HeaderModule = (function ($) {
         if(windowWidth<=450 && !($("#sign-up-form").length)){
             $(window).on('scroll',function () {
                 var $this = $(this);
-                console.log($this.scrollTop());
+                //console.log($this.scrollTop());
 
                 if ($this.scrollTop()>= 400){
                     $('header').addClass('scrolled')
@@ -84,6 +125,12 @@ var HeaderModule = (function ($) {
             })
         }else if($("#sign-up-form").length && windowWidth<=450){
             $('header').addClass('scrolled sign');
+        }
+    }
+
+    function checkSign(){
+        if($(".sign-up-container").length > 0){
+            $(".burger-button").addClass('sign');
         }
     }
 

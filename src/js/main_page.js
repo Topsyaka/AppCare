@@ -29,7 +29,11 @@ $(document).ready(function(){
         }
     ],1)
     $(window).scroll(function () {
-        var scrollY = this.scrollY;
+        var doc = document.documentElement;
+
+        var scrollY = (window.pageYOffset || doc.scrollTop)  + 300;//(doc.clientTop || 0);
+        //var scrollY = this.scrollY;
+        //console.log(this.scrollTop());
         AnimationModule.addAnimationToElement([
             {
                 elementID: "#topBlockImage",

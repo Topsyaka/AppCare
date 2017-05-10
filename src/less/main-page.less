@@ -9,6 +9,9 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  @media screen and (max-width: 1024px){
+    background-attachment: scroll;
+  }
 
     .iphone{
       @media screen and (max-width: 450px){
@@ -267,7 +270,16 @@
     .right-part{
       .points-list{
         li{
+          @media screen and (max-width: 1024px){
+            margin-bottom: 23px;
+            br{
+              display: none;
+            }
+          }
           .text{
+            @media screen and (max-width: @big_break){
+              font-size: 20px;
+            }
             @media screen and (max-width: @main_breakpoint){
               font-size: 14px;
               line-height: 1.5em;

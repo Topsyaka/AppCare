@@ -10,7 +10,7 @@
 //media width
 
 @big_break: 776px;
-@main_breakpoint: 450px;
+@main_breakpoint: 564px;
 @smallest_screen: 320px;
 
 //Fonts
@@ -141,6 +141,7 @@ a{
 textarea.input{
   height: 115px;
   resize: none;
+  overflow: hidden;
   line-height: 20px;
   padding: 10px 20px;
 }
@@ -171,6 +172,9 @@ textarea.input{
   width: 100%;
   font-family: @font_style;
   font-weight: 400;
+  @media screen and (max-width: 770px){
+    font-size: 9px;
+  }
 }
 
 label{

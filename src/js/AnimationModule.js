@@ -39,9 +39,9 @@ var AnimationModule = (function ($) {
                     var elem = $(obj.elementID),
                         animateClass = obj.elementAnimationClass,
                         elemOffsetTop = elem.offset().top;
-                    console.log(elemOffsetTop+' '+scrollTop);
+                    //console.log(elemOffsetTop+' '+scrollTop);
                     if ((elemOffsetTop <= (scrollTop + windowHeight/4)) || obj.onload) {
-                        elem.addClass(`animated ${animateClass}`);
+                        elem.addClass('animated '+animateClass);
                         if (obj.afterAnimation) {
                             elem.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
                                 objectParse(obj.afterAnimation, 1);

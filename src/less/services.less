@@ -75,11 +75,21 @@
         top: 20%;
         left: 390px;
         z-index: 1;
+        @media screen and (max-width: 768px){
+          top: 28%;
+          left: 250px;
+          z-index: 1;
+        }
       }
       &.second-image{
         top: 30%;
         left: 170px;
         z-index: 2;
+        @media screen and (max-width: 768px){
+          top: 37%;
+          left: 115px;
+          z-index: 2;
+        }
       }
     }
     .item-w100{
@@ -96,6 +106,9 @@
   background-position: center;
   height: 100vh;
   min-height: 710px ;
+  @media screen and (max-width: 768px){
+    background-position-x: -45px;
+  }
   .container{
     display: flex;
     flex-direction: column;
@@ -126,9 +139,13 @@
       justify-content: flex-start;
       align-items: center;
       min-height: 375px;
+      height: 375px;
       flex:1;
       @media screen and (max-width: @main_breakpoint){
         max-height: 275px;
+      }
+      .item-5{
+        height: 100%;
       }
       .item-4{
         align-self: flex-start;
@@ -142,6 +159,7 @@
         color: @white;
         font-size: 18px;
         line-height: 28px;
+        height: 375px;
         li{
           display: flex;
           flex: 1;
@@ -151,6 +169,7 @@
           height: 100px;
           img{
             max-width: 40px;
+            width: 40px;
             flex: 1;
             margin-right: 40px;
             @media screen and (max-width: @main_breakpoint){
@@ -159,6 +178,10 @@
           }
           .text{
             max-width: 265px;
+            display: flex;
+            align-items: center;
+
+
             @media screen and (max-width: @main_breakpoint){
               font-size: 14px;
               line-height: 1.5em;
